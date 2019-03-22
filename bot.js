@@ -253,7 +253,10 @@ ${prefix}invite ⥨ لدعوة البوت الى سيرفرك
 
 ${prefix}support ⥨ لدخول سيرفر الدعم
 
-رابط البوت:https://discordapp.com/oauth2/authorize?client_id=558298401004060673&permissions=8&scope=bot
+مع تحياتي:جاك
+
+ملاحظه:البوت خاص بسيرفر 
+DERT SERVER
 
 	  `)
    message.channel.sendEmbed(embed)
@@ -273,7 +276,6 @@ ${prefix}support ⥨ لدخول سيرفر الدعم
 	  
 الاوامــر الــعـــامـــة
 
-⤠ #invite ⥨ لدعوة البوت الى سيرفرك
 ⤠ #server ⥨ معلومات عن السيرفر                      
 ⤠ #say ⥨ البوت يردد كلامك         
 ⤠ #setcolor ⥨ عشان تغير لونك ملاحظة لازم تحط رقم اللون                                          
@@ -330,7 +332,7 @@ client.channels.get("470259562121920512").sendEmbed(embed)
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = ['In 77 Server','*help | *invite','In 77 Server','*help | *invite','In 77 Server'];
+    var setGame = ['#help /by jak'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -460,7 +462,7 @@ client.on('message', function(message) {
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+            if(!args) return message.reply('اكتب الاسم اللي تريدها.');
         client.user.setUsername(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
            msg.delete(5000);
@@ -494,7 +496,7 @@ client.on('message', function(message) {
 				        if(message.author.id !== myID) return;
         client.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+                if(!args) return message.reply('ادخل رابط الصوره.');
            msg.delete(5000);
           message.delete(5000);
         });
@@ -646,7 +648,7 @@ client.on("guildMemberAdd", member => {
    
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "244888652004458497") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "558220897547452418") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
@@ -798,7 +800,7 @@ if (message.content.startsWith(prefix + 'trans')) {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :scales:سيرفر الدعم:scales:  **" , "  **https://discord.gg/6svmrx**")
+  .addField(" ** :scales:سيرفر الدعم:scales:  **" , "  **https://discord.gg/M8nrkA**")
      
      
   message.channel.sendEmbed(embed);
@@ -897,7 +899,7 @@ client.on('message', message => {
    
    client.on('message', message => {
 
-    if (message.content.startsWith("#link")) {        
+    if (message.content.startsWith("رابط")) {        
   message.channel.createInvite({
         thing: true,
         maxUses: 100,
